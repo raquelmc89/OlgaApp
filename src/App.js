@@ -4,7 +4,7 @@ import NotFoundPage from './components/notFounPage';
 import AboutMe from './components/dashboardPage';
 import ContactMe from './components/contactMe';
 import Reviews from './components/reviews'
-import './App.css';
+import './App.scss';
 
 const App = () => {
   return (
@@ -16,7 +16,6 @@ const App = () => {
     <Route path="/" element={<AboutMe/>}/>
         <Route path="contactMe" element={<ContactMe/>}/>
         <Route path="reviews" element={<Reviews/>} />
-
     </Routes>
     </div>
     </BrowserRouter>

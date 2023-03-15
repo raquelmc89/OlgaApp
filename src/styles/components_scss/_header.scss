@@ -1,0 +1,43 @@
+
+
+.header {
+    background: $off-black;
+    margin-bottom: $m-size;
+    padding:$m-size 0;
+    color: white;
+    background-color: $pale-pink;
+}
+
+//BEM block element modifier
+.header{
+  font-size: $l-size;
+  margin:0;
+  color:white;
+  margin-left: 30px;
+  font-size: $m-size;
+}
+
+.header__subtitle {
+    color: $off-white;
+    font-size:$m-size;
+    font-weight: 500;
+    margin: 0;
+}
+
+.nav{
+  display:flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+
+
+  
+
+  
+
+}
+
+@media (min-width:$deskop-breakpoint){
+  .header{
+    margin-bottom: $xl-size;
+  }
+}
