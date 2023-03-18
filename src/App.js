@@ -1,4 +1,4 @@
-import Header from './components/header';
+import Header from './routes/appRouter';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import NotFoundPage from './components/notFounPage';
 import AboutMe from './components/dashboardPage';
@@ -9,13 +9,13 @@ import './App.scss';
 const App = () => {
   return (
     <BrowserRouter>
-    <div>
     <Header/>
+    <div>
     <Routes>
     <Route path='*' element={<NotFoundPage/>}/>
-    <Route path="/" element={<AboutMe/>}/>
-        <Route path="contactMe" element={<ContactMe/>}/>
-        <Route path="reviews" element={<Reviews/>} />
+    <Route path="/" element={<AboutMe title="About me"/>}/>
+        <Route path="contactMe" element={<ContactMe title="Contact me"/>}/>
+        <Route path="reviews" element={<Reviews title="Reviews"/>} />
     </Routes>
     </div>
     </BrowserRouter>
