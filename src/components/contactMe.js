@@ -17,20 +17,15 @@ import { render } from "@testing-library/react";
   const USER_ID="v28MlW8QIbeW8Jfum";
   
 
-// export default class ContactMe extends React.Component{
+
 
    export default class ContactMe extends React.Component{
     constructor(props){
                 super(props);
-        
-                this.state ={
+                  this.state ={
                     name:"",
                     comment:"",
-                    phone: "",
-                    mail:"",
-                    date:"",
-                    calendarFocused:false,
-                    format: "DD/MM/yyy"
+                    format: "DD/MM/yyy", 
                 }
             };
             
@@ -40,99 +35,87 @@ import { render } from "@testing-library/react";
                     this.setState(()=>({name}))
                 }
             };
-            // handleMail = (e) =>{
-            //     const email = e.target.value;
-            //     if (!email || email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i)){
-            //         this.setState(()=>({email}))
-            //     }
-            // };
             handleComment = (e)=>{
                 const comment = e.target.value;
                 if(!comment || comment.match(/^(?=.{0,100}$)([-'\w]+\s)*[-'\w]+$/)){
                     this.setState(()=>({comment}))
                 }
             };
-            onDateChange = (date) => {
-                if (date) {
-                    this.setState(()=>({date}))
-                }
-            };
-            onFocusChange = ({ focused }) => {
-                this.setState(() => ({ calendarFocused: focused }));
-              };
-            
-            onSbubmit = (e)=>{     
-            e.preventDefault();
-
-              emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-          .then((result) => {
-            console.log(result.text);
-            Swal.fire({
-              icon: 'success',
-              title: 'Message Sent Successfully'
-            })
-          }, (error) => {
-            console.log(error.text);
-            Swal.fire({
-              icon: 'error',
-              title: 'Ooops, something went wrong',
-              text: error.text,
-            })
-          });
-        e.target.reset()
-      };
+              onSbubmit = (e)=>{     
+                e.preventDefault();
+    
+                  emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+              .then((result) => {
+                console.log(result.text);
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Message Sent Successfully'
+                })
+              }, (error) => {
+                console.log(error.text);
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Ooops, something went wrong',
+                  text: error.text,
+                })
+              });
+            e.target.reset()
+          };
       render(){
            return(
             <div>
             <h2>Book an appointment</h2>
             <Form onSubmit={this.onSbubmit}>
             <Form.Field
-             id="form-input-control-last-name"
-             control={Input}
-             label='Name'
-             name='user_name'
-             placeholder='Name'
-             required
-             icon='user circle'
-             iconPosition='left'
-             value={this.state.name}
-             onChange={this.handleName}
-            ></Form.Field> 
-            <SingleDatePicker
-            id="form-input-control-date"
-            control={Input}
-            label='Date'
-            name='user_date'
-            placeholder="pick a day and time"
-            date={this.state.date}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            displayFormat= {this.state.format}
+              id="form-input-control-last-name"
+              control={Input}
+              label='Name'
+              name='user_name'
+              placeholder='Name'
+              required
+              icon='user circle'
+              iconPosition='left'
+              value={this.state.name}
+              onChange={this.handleName}
             >
-           </SingleDatePicker>
+            </Form.Field> 
             <Form.Field
-            id='form-input-control-email'
-            control={Input}
-            label='Email'
-            name='user_email'
-            placeholder='Email…'
-            required
-            icon='mail'
-            iconPosition='left'
-            // value={this.state.mail}
-            // onChange={this.handleMail}
-            ></Form.Field>
+            id="form-input-control-date"
+             control={Input}
+             label='Date'
+             name='user_date'>
+            <SingleDatePicker
+             
+             placeholder="pick a day and time"
+             date={this.state.date}
+             onDateChange={date=> this.setState({date})}
+             focused={this.state.focused}
+             onFocusChange={({focused})=> this.setState({focused})}
+             numberOfMonths={1}
+             displayFormat={this.state.format}
+            >
+            </SingleDatePicker>
+            </Form.Field>
+            <Form.Field
+             id='form-input-control-email'
+             control={Input}
+             label='Email'
+             name='user_email'
+             placeholder='Email…'
+             required
+             icon='mail'
+             iconPosition='left'
+            >
+            </Form.Field>
             <PhoneInput
-            id="form-input-control-phone"
-            control={Input}
-            label='Phone'
-            name='user_number'
-            placeholder="phone number"
-            required
-            value={this.state.phone}
-            onChange={phone=> this.setState({phone})}
+             id="form-input-control-phone"
+             control={Input}
+             label='Phone'
+             name='user_number'
+             placeholder="phone number"
+             required
+             value={this.state.phone}
+             onChange={phone=> this.setState({phone})}
             >
             </PhoneInput>
             <Form.TextArea
@@ -141,10 +124,12 @@ import { render } from "@testing-library/react";
              name='user_message'
              label="Message"
              placeholder="max 100 words"
-             required>
+             required
+             value={this.state.comment}
+             onChange={this.handleComment}
+             >
              </Form.TextArea>
-             <Button 
-             type="submit">
+             <Button>
              Submit
             </Button>
         </Form>
