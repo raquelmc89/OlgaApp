@@ -17,12 +17,13 @@ const AboutMe = ({title}) => {
    
      function openModal() {
        setIsOpen(true);
+       
      };
    
-     function afterOpenModal() {
+     //function afterOpenModal() {
        // references are now sync'd and can be accessed.
-       subtitle.style.color = '#f00';
-     };
+       //subtitle
+    // };
    
      function closeModal() {
        setIsOpen(false);
@@ -34,19 +35,22 @@ const AboutMe = ({title}) => {
         <img
           src={diploma1} 
           onClick={openModal}
-          />Open Modal
+          className='diploma'
+          />
+        <img
+        src={diploma1}
+        onClick={openModal}
+        className='diploma'/>  
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
+          //onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           contentLabel="Example Modal"
           className="modal"
         >
-          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-          <button onClick={closeModal}>close</button>
-          <form>
+          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Diploma</h2>
            <img src={diploma1}/>
-          </form>
+          <button onClick={closeModal} className='button'>close</button>
         </Modal>
         </div>
         </div>
