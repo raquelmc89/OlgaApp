@@ -20,14 +20,11 @@ import { render } from "@testing-library/react";
 
 
    export default class ContactMe extends React.Component{
-    constructor(props){
-                super(props);
-                  this.state ={
+                  state ={
                     name:"",
                     comment:"",
                     format: "DD/MM/yyy", 
-                }
-            };
+                  }
             
             handleName = (e) =>{
                 const name = e.target.value;
@@ -80,7 +77,7 @@ import { render } from "@testing-library/react";
             >
             </Form.Field> 
             <Form.Field
-            id="form-input-control-date"
+             id="form-input-control-date"
              control={Input}
              label='Date'
              name='user_date'>
