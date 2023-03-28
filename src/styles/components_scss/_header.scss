@@ -1,21 +1,25 @@
 
 
 .header {
-    background: $off-black;
-    margin-bottom: $m-size;
-    padding:$m-size 0;
-    color: white;
-    background-color: $pale-pink;
+
+ margin-left: $m-size;
+ padding: $s-size;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ padding: $s-size;
+}
+
+.navLink{
+  padding: $s-size;
+  color: white;
+}
+
+.navLink:hover{
+  color:$dark-blue;
 }
 
 //BEM block element modifier
-.header{
-  font-size: $l-size;
-  margin:0;
-  color:white;
-  margin-left: 30px;
-  font-size: $m-size;
-}
 
 .header__subtitle {
     color: $off-white;
@@ -26,12 +30,37 @@
 
 .nav{
   display:flex;
-  justify-content: flex-end;
-  margin-right: 20px;
+  justify-content: flex-start;
+  //margin-right: 30px;
+  flex-direction: column;
+  background-color: $pale-pink;
+}
+
+
+.mainPicture{
+  width: min-content;
+  height: auto;
+  border-radius: $s-size; 
+  margin-left:$xl-size;
+}
+
+.picLogo{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.logo{
+  width: $s-size;
+  height: $s-size;
+  margin-top: $m-size;
+  margin-left:$xl-size;
+ 
+
 }
 
 @media (min-width:$deskop-breakpoint){
   .header{
-    margin-bottom: $xl-size;
+    margin-top:300px;
   }
 }

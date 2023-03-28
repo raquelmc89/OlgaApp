@@ -1,11 +1,29 @@
-.diploma {
+ .diploma {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    height: $xl-size;
-  }
+    height: auto;
+    margin-right: $s-size;
+  
+   }
   
   .diploma:hover {
     opacity: 0.7;
 }
   
+.about{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: $s-size;
+ 
+}
+.description{
+  display: flex;
+  justify-content:flex-end;
+  margin-right: $s-size;
+  width: 20rem
+}

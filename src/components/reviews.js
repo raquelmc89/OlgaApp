@@ -1,9 +1,10 @@
 import React from "react";
 
-const Reviews = ({title}) =>{
+const Reviews = ({title,picture}) =>{
     return(
         <div>
-        <h1>{title}</h1>
+        <img src={picture}/>
+        <h1 className="title">{title}</h1>
         <p>this is reviews page</p>
         </div>
     )

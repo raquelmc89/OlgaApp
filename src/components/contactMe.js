@@ -9,7 +9,8 @@ import Swal from 'sweetalert2';
 import 'react-phone-number-input/style.css';
 import 'react-dates/lib/css/_datepicker.css';
 import 'semantic-ui-css/semantic.min.css';
-import { render } from "@testing-library/react";
+
+//import { render } from "@testing-library/react";
 
 
   const SERVICE_ID ="service_n6ywlvr";
@@ -23,7 +24,9 @@ import { render } from "@testing-library/react";
                   state ={
                     name:"",
                     comment:"",
-                    format: "DD/MM/yyy", 
+                    format: "DD/MM/yyy",
+                    title:'Contact me',
+                    
                   }
             
             handleName = (e) =>{
@@ -60,10 +63,14 @@ import { render } from "@testing-library/react";
           };
       render(){
            return(
-            <div>
-            <h2>Book an appointment</h2>
+            
+            <div className="contact">
+            <img src={this.picture}/>
+            <h1 className="title">{this.state.title}</h1>
+            <h2 className="'subtitle">Book an appointment</h2>
             <Form onSubmit={this.onSbubmit}>
             <Form.Field
+            className="form"
               id="form-input-control-last-name"
               control={Input}
               label='Name'
@@ -80,7 +87,8 @@ import { render } from "@testing-library/react";
              id="form-input-control-date"
              control={Input}
              label='Date'
-             name='user_date'>
+             name='user_date'
+             >
             <SingleDatePicker
              
              placeholder="pick a day and time"

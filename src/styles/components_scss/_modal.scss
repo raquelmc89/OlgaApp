@@ -14,7 +14,7 @@
 
 .ReactModalPortal .ReactModal__Overlay--before-close{
     opacity: 0;
- }
+ };
 
  .modal{
     background: $pale-orange;
@@ -23,6 +23,7 @@
     outline:none;
     padding:$l-size;
     text-align: center;
+    border-radius: 2rem;
 
  }
  .modal__title{
