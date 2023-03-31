@@ -6,6 +6,7 @@ import PhoneInput from 'react-phone-number-input'
 import { Form, Input, TextArea, Number, Button } from 'semantic-ui-react';
 import emailjs from 'emailjs-com'
 import Swal from 'sweetalert2';
+import Olga from "../images/Olga.jpg"
 import 'react-phone-number-input/style.css';
 import 'react-dates/lib/css/_datepicker.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -25,7 +26,7 @@ import 'semantic-ui-css/semantic.min.css';
                     name:"",
                     comment:"",
                     format: "DD/MM/yyy",
-                    title:'Contact me',
+                    title:'Contact me'
                     
                   }
             
@@ -64,8 +65,8 @@ import 'semantic-ui-css/semantic.min.css';
       render(){
            return(
             
-            <div className="contact">
-            <img src={this.picture}/>
+            <div className="about">
+            <img src={Olga} className="mainPicture"/>
             <h1 className="title">{this.state.title}</h1>
             <h2 className="'subtitle">Book an appointment</h2>
             <Form onSubmit={this.onSbubmit}>

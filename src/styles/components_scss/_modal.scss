@@ -17,7 +17,7 @@
  };
 
  .modal{
-    background: $pale-orange;
+    background: $base;
     color: white;
     max-width: 40rem;// if its a long sentence it will stay inside the box
     outline:none;
@@ -35,4 +35,16 @@
     margin: 0 0 $l-size 0;
     word-break: break-all; // if its a very long word to keep it inside the box
 
+ }
+
+ .close{
+   background-color:#d99ec9 ;
+   border: none;
+   color:black;
+
+ }
+
+ .button{
+   background-color: #d99ec9;
+   border:none;
  }

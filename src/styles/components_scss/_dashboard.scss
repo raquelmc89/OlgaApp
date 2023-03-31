@@ -7,7 +7,9 @@
     transition: 0.3s;
     height: auto;
     margin-right: $s-size;
+    margin-top: $xl-size;
   
+   
    }
   
   .diploma:hover {
@@ -17,13 +19,34 @@
 .about{
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  margin-right: $s-size;
+  width: 100%;
+  
  
 }
 .description{
   display: flex;
-  justify-content:flex-end;
-  margin-right: $s-size;
-  width: 20rem
+  color: white;
+  flex-direction: row-reverse;
+  justify-content:space-around;
+
+  
+}
+
+.aboutOlga{
+ height: 400px;
+ width: 40rem;
+ word-wrap: break-word;
+ max-width: 30rem;
+
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  width: 30rem;
+}
+
+h1{
+  text-align: center;
 }
