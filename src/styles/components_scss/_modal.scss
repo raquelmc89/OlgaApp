@@ -24,6 +24,7 @@
     padding:$l-size;
     text-align: center;
     border-radius: 2rem;
+    width: fit-content;
 
  }
  .modal__title{
@@ -36,6 +37,8 @@
     word-break: break-all; // if its a very long word to keep it inside the box
 
  }
+
+ 
 
  .close{
    background-color:#d99ec9 ;
