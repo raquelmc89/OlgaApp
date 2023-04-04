@@ -1,12 +1,18 @@
  .diploma {
     display:flex;
     flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    //flex-wrap: wrap
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: $m-size;
  }
-  
+  .diplomas{
+    font-weight: 600;
+    margin-top:$s-size;
+    text-align: center;
+    font-size:130% ;
+  }
   .diploma:hover {
     opacity: 0.7;
 }
@@ -30,7 +36,7 @@
 }
 
 .aboutOlga{
- height: 400px;
+ height:fit-content;
  width: 40rem;
  word-wrap: break-word;
  max-width: 30rem;

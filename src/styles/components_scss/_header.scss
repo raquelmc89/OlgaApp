@@ -38,9 +38,9 @@ display: flex;
 
 .mainPicture{
   width: min-content;
-  height: auto;
+  height:max-content;
   border-radius: $s-size;
-  margin-top: -3.5rem;
+  margin-top: rem;
 }
 
 .picLogo{
@@ -50,13 +50,16 @@ display: flex;
 }
 
 .logo{
-  width: $s-size;
-  height: $s-size;
-  margin-top: $m-size;
-  margin-left:$xl-size;
- 
-
+  // width: $s-size;
+  // height: $s-size;
+   margin-top: $m-size;
+   margin-left:15rem;
 }
+.whatsapp{
+  margin-top: -6rem;
+  margin-left: 8rem;
+}
+
 
 // @media (min-width:$deskop-breakpoint){
 //   .header{

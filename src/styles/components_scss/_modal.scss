@@ -19,7 +19,7 @@
  .modal{
     background: $base;
     color: white;
-    max-width: 40rem;// if its a long sentence it will stay inside the box
+    max-width: 60rem;// if its a long sentence it will stay inside the box
     outline:none;
     padding:$l-size;
     text-align: center;
@@ -38,7 +38,10 @@
 
  }
 
- 
+ .diplomaModal{
+   display:flex;
+   width:50rem;
+ }
 
  .close{
    background-color:#d99ec9 ;
