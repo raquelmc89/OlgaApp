@@ -1,12 +1,87 @@
-.contact{
-   
-    display:flex;
-    align-content: flex-end;
-    margin-top: 10rem;
-  
+
+.ui.form{
+  outline: 0;
+  font-size: 1.5rem;
+  transition: border-color 0.2s;
+  margin-top: -2rem;
+ 
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
+.ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+}
+.ui.form textarea{
+    background: transparent;
+}
+
+.ui.form .field>label {
+    display: block;
+    margin: $m-size;
+    color:black ;
+    font-size: $m-size;
+    font-weight: 700;
+    text-transform: none;
+
+}
+
+.ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
+    width: 28rem;
+    background-color:transparent;
+    -webkit-text-fill-color: black;
+    
+}
+.ui.form .field.field input:-webkit-autofill:focus,
+.ui.form .field.field input:-webkit-autofill:hover,
+.ui.form .field.field input:-webkit-autofill:active,
+.ui.form .field.field input:-webkit-autofill {
+    box-shadow: 0 0 0 30px white inset!important;
+    border-color: $gray!important;
+    //transition: background-color 5000s ease-in-out 0s;
+
+}
+
+.PhoneInputCountryIconImg {
+   
+    margin-top: 0rem;
+}
+
+.ui.form textarea {
+    
+    height: 8rem;
+    border: 2px solid $gray;
+    resize: none;
+}
+
+button.ui.button{
+   background-color:white;
+   display: flex;
+   padding-top: $s-size;
+   margin: auto;
+   height: 5rem;
+   justify-items: center;
+   width: 10rem;
+   justify-content: center;
+    
+    border: 2px solid $gray;
+   transition-duration: 0.5s;
+   font-size: $s-size;
+   border-radius: 10%;
+  
+
+}
+button.ui.button:hover{
+     
+    background-color: $gray;
+ 
+}
+
+.button{
+    color:black
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import { v4 as uuid4 } from "uuid";
-import Modal from "react-modal";
+import Modal from 'react-modal'
+import ModalImage from "react-modal-image";
+import {Lightbox} from "react-modal-image"
 import { SocialIcon } from "react-social-icons";
 //photos
 import whatsapp from "../images/whatsapp.png";
@@ -18,21 +20,13 @@ import { GrClose } from "react-icons/gr";
 
 Modal.setAppElement("#root");
 
-const AboutMe = ({ title }) => {
+const AboutMe = ({title}) => {
   //const {v4: uuid4} = require ('uuid')
   // console.log(uuid4()
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
-  function closeModal() {
-    setIsOpen(false);
-    
-    //<GrClose/>;
-  }
+  let subtitle;  
   return (
     <div className="about">
+  
       <div className="description">
         <div className="title">
           <h1>{title}</h1>
@@ -80,28 +74,33 @@ const AboutMe = ({ title }) => {
       </div>
       <p className="diplomas">Diplomas</p>
       <div className="diploma">
-        <img src={diploma1thumbnail} onClick={openModal} />
-        <img src={diploma2thumbnail} onClick={openModal} />
-        <img src={diploma3thumbnail} onClick={openModal} />
-        <img src={diploma4thumbnail} onClick={openModal} />
+      <ModalImage
+      className="diplomaImage"
+      small={diploma1thumbnail}
+      large={diploma1}
+      alt="diploma1"
+      hideDownload= {true}
+      imageBackgroundColor="green"
+      />
+      <ModalImage
+      small={diploma2thumbnail}
+      large={diploma2}
+      alt="diploma2"
+      hideDownload= {true}
+      /><ModalImage
+      small={diploma3thumbnail}
+      large={diploma3}
+      alt="diploma3"
+      hideDownload= {true}
+      /><ModalImage
+      small={diploma4thumbnail}
+      large={diploma4}
+      alt="diploma4"
+      hideDownload= {true}
+      />
       </div>
-      <Modal
-        isOpen={modalIsOpen}
-        //onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-        className="modal"
-      >
-        <button onClick={closeModal} className="button">
-          <GrClose className="close" />
-        </button>
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Diploma</h2>
-        <img className="diplomaModal" src={diploma1} />
-        <img className="diplomaModal" src={diploma2} />
-        <img className="diplomaModal" src={diploma3} />
-        <img className="diplomaModal" src={diploma4} />
-       
-      </Modal>
+      
+      
     </div>
   );
 };

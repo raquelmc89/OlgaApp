@@ -7,6 +7,7 @@
     transition: 0.3s;
     margin-bottom: $m-size;
  }
+
   .diplomas{
     font-weight: 600;
     margin-top:$s-size;
@@ -28,7 +29,7 @@
 }
 .description{
   display: flex;
-  color: white;
+  color: black;
   flex-direction: row-reverse;
   justify-content:space-around;
 
@@ -52,4 +53,18 @@
 
 h1{
   text-align: center;
+}
+
+.__react_modal_image__modal_content img, .__react_modal_image__modal_content svg:hover {
+//opacity: 1;
+//filter:sepia()
+}
+
+
+
+.__react_modal_image__modal_content:hover {
+    
+    //filter: sepia();
+  
+    //background-color: black;
 }
