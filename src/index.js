@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
+import './i18n';
 //import Modal from './playground/playground';
 import App from './App';
 import './styles/OlgaAppStyles.scss'
@@ -9,7 +10,6 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
- 
    <App/>
   </React.StrictMode>
 );

@@ -1,7 +1,6 @@
 import React from "react";
-import "react-dates/initialize"
+import "react-dates/initialize";
 import PhoneInput from "react-phone-number-input";
-import {getCountryCallingCode} from 'react-phone-number-input'
 import { Form, Input, TextArea, Number, Button } from "semantic-ui-react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
@@ -59,9 +58,12 @@ export default class ContactMe extends React.Component {
     );
     e.target.reset();
   };
-  render() {
+
+    render() {
     return (
+      
       <div className="about">
+    
         <div className="description">
          <div className="title">
             <h1>{this.state.title}</h1>

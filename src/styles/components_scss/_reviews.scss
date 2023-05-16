@@ -1,9 +1,15 @@
 .reviews{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: $l-size;
-    margin-top:$l-size;
-    
-   
+  height:35rem;
+  width: 40rem;
+  word-wrap: break-word;
+  max-width: 30rem;
+
+  }
+
+  .reviewsName{
+    color:aqua
+  }
+
+  .reviewsContent{
+    color:black
   }

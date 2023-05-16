@@ -1,8 +1,6 @@
 import React from "react";
-import { v4 as uuid4 } from "uuid";
-import Modal from 'react-modal'
+import Modal from "react-modal";
 import ModalImage from "react-modal-image";
-import {Lightbox} from "react-modal-image"
 import { SocialIcon } from "react-social-icons";
 //photos
 import whatsapp from "../images/whatsapp.png";
@@ -15,18 +13,16 @@ import diploma3 from "../images/diploma3.jpeg";
 import diploma3thumbnail from "../images/diploma3thumbnail.jpeg";
 import diploma4 from "../images/diploma4.jpeg";
 import diploma4thumbnail from "../images/diploma4thumbnail.jpeg";
-//icons
-import { GrClose } from "react-icons/gr";
+
 
 Modal.setAppElement("#root");
 
-const AboutMe = ({title}) => {
+const AboutMe = ({ title }) => {
   //const {v4: uuid4} = require ('uuid')
   // console.log(uuid4()
-  let subtitle;  
+  let subtitle;
   return (
     <div className="about">
-  
       <div className="description">
         <div className="title">
           <h1>{title}</h1>
@@ -74,33 +70,33 @@ const AboutMe = ({title}) => {
       </div>
       <p className="diplomas">Diplomas</p>
       <div className="diploma">
-      <ModalImage
-      className="diplomaImage"
-      small={diploma1thumbnail}
-      large={diploma1}
-      alt="diploma1"
-      hideDownload= {true}
-      imageBackgroundColor="green"
-      />
-      <ModalImage
-      small={diploma2thumbnail}
-      large={diploma2}
-      alt="diploma2"
-      hideDownload= {true}
-      /><ModalImage
-      small={diploma3thumbnail}
-      large={diploma3}
-      alt="diploma3"
-      hideDownload= {true}
-      /><ModalImage
-      small={diploma4thumbnail}
-      large={diploma4}
-      alt="diploma4"
-      hideDownload= {true}
-      />
+        <ModalImage
+          className="diplomaImage"
+          small={diploma1thumbnail}
+          large={diploma1}
+          alt="diploma1"
+          hideDownload={true}
+          imageBackgroundColor="green"
+        />
+        <ModalImage
+          small={diploma2thumbnail}
+          large={diploma2}
+          alt="diploma2"
+          hideDownload={true}
+        />
+        <ModalImage
+          small={diploma3thumbnail}
+          large={diploma3}
+          alt="diploma3"
+          hideDownload={true}
+        />
+        <ModalImage
+          small={diploma4thumbnail}
+          large={diploma4}
+          alt="diploma4"
+          hideDownload={true}
+        />
       </div>
-      
-      
     </div>
   );
 };

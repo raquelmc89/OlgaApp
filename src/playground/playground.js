@@ -8,6 +8,12 @@ import diploma4 from "../images/diploma4.jpeg";
 import diploma4thumbnail from "../images/diploma4thumbnail.jpeg";
 import React, { useState } from "react";
 
+
+
+
+
+
+
 class Modal extends React.Component{
   state = {
     images: [{diploma1, diploma2, diploma3, diploma4}],
